@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.Random;
 
 public class Gift {
     Graphics g;
@@ -15,8 +16,12 @@ public class Gift {
     }
 
     public static void drawGift(Graphics g, int x, int y, int w, int h) {
+        Color[] colors = new Color[] {new Color(254, 220, 62), new Color(220, 20, 60),
+                new Color(0, 0, 255)};
+        Random rnd = new Random();
         int centX = x + w/2;
-        g.setColor(Color.RED);
+        int i = rnd.nextInt(colors.length);
+        g.setColor(colors[i]);
         g.fillRect(x, y, w, h);
         g.setColor(Color.WHITE);
         g.fillRect(centX - w/7, y, 2*w/7, h);

@@ -10,6 +10,6 @@ public class DrawPanel extends JPanel {
         Window.drawWindow(g, 150, 150, 100, 170);
         Tree.drawChristmasTree(g, 350, 250, 80, 3);
         Gift.drawGift(g, 150, 450, 100, 60);*/
-        Picture.drawPicture(g, 50, 50, 500, 450);
+        Picture.drawPicture(g, 0, 0, 600, 550);
     }
 }
