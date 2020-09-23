@@ -19,7 +19,7 @@ public class Tree {
         drawTree(g, x, y, h);
         int dy = (int)(a*Math.sqrt(3)/3);
         int dx = a / 6;
-        int maxY = y - h/3 + 2*h/3;   //когда перестать рисовать треугольники. может другие координаты передавать ?
+        int maxY = y - h/3 + 2*h/3;
         while (y <= maxY) {
             drawLights(g, x, y, a);
             y = y + dy;
