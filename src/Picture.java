@@ -25,7 +25,7 @@ public class Picture {
     public static void drawPicture (Graphics g, int x, int y, int w, int h) {
         Room.drawRoom(g, x, y, w, h);
         Fireplace.drawFireplace(g, x, y, w, h);
-        Window.drawWindow(g, x + w/5, y + h/4, w/5, h/4/*h/3*/);  //может везде нужно передавать одни координаты
+        Window.drawWindow(g, x, y, w, h/*h/4*/);  //может везде нужно передавать одни координаты
         Tree.drawChristmasTree(g, x + 2*w/3, y + h/3, h);        //и менять их уже внутри draw-методов ???
         Gift.drawGift(g, x + w/4, y + 4*h/5, w/7, h/8);
         Gift.drawGift(g, x + w/2, y + 6*h/7, w/5, h/10);
