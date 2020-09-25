@@ -5,14 +5,10 @@ public class Gift {
     Graphics g;
     int x;
     int y;
-    int w;
-    int h;
 
-    public Gift(Graphics g, int x, int y, int w, int h) {
+    public Gift(Graphics g, int x, int y) {
         this.x = x;
         this.y = y;
-        this.w = w;
-        this.h = h;
     }
 
     public static void drawGift(Graphics g, int x, int y, int w, int h) {
