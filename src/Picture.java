@@ -1,31 +1,22 @@
 import java.awt.*;
 
 public class Picture {
-    Graphics g;
-    /*Room room;
+    Room room;
     Window window;
     Tree tree;
-    Gift gift;*/
-    int x;
-    int y;
-    int w;
-    int h;
+    Gift gift;
 
-    public Picture(Graphics g, int x, int y, int w, int h) {
-        /*this.room = new Room(g, x, y, w, h);
-        this.window = new Window(g, x, y, w, h);
-        this.tree = new Tree(g, x, y, h);
-        this.gift = new Gift(g, x, y, w, h);*/
-        this.x = x;
-        this.y = y;
-        this.w = w;
-        this.h = h;
+    public Picture(Room room, Window window, Tree tree, Gift gift) {
+        this.room = room;
+        this.window = window;
+        this.tree = tree;
+        this.gift = gift;
     }
 
-    public static void drawPicture (Graphics g, int x, int y, int w, int h) {
+    public static void drawPicture (Graphics g, int x, int y, int w, int h) {     //передавать относительные координаты (потому что подарков, например, два)
         Room.drawRoom(g, x, y, w, h);
         Fireplace.drawFireplace(g, x, y, w, h);
-        Window.drawWindow(g, x, y, w, h/*h/4*/);  //может везде нужно передавать одни координаты
+        Window.drawWindow(g, x + w/4, y + h/4, w/6, 2*h/7);  //может везде нужно передавать одни координаты
         Tree.drawChristmasTree(g, x + 2*w/3, y + h/3, h);        //и менять их уже внутри draw-методов ???
         Gift.drawGift(g, x + w/4, y + 4*h/5, w/7, h/8);
         Gift.drawGift(g, x + w/2, y + 6*h/7, w/5, h/10);
